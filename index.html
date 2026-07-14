@@ -1,442 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - My Life is all BOOKed</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .language-switcher {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 20px;
-        }
-
-        .language-switcher button {
-            padding: 10px 20px;
-            border: none;
-            background: #f5f5f5;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        .language-switcher button.active {
-            background: #2b2b2b;
-            color: white;
-        }
-
-        .language-switcher button:hover:not(.active) {
-            background: #e0e0e0;
-        }
-
-        .policy-section {
-            display: none;
-        }
-
-        .policy-section.active {
-            display: block;
-        }
-
-        h1 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            color: #2b2b2b;
-        }
-
-        .meta {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
-        }
-
-        h2 {
-            margin-top: 30px;
-            margin-bottom: 15px;
-            color: #2b2b2b;
-            font-size: 20px;
-        }
-
-        h3 {
-            margin-top: 20px;
-            margin-bottom: 10px;
-            color: #444;
-            font-size: 16px;
-        }
-
-        p {
-            margin-bottom: 15px;
-        }
-
-        ul, ol {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        table th, table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-
-        table th {
-            background: #f5f5f5;
-            font-weight: bold;
-        }
-
-        .summary {
-            background: #f9f3e6;
-            padding: 15px;
-            border-left: 4px solid #d4a574;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-
-        code {
-            background: #f4f4f4;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-        }
-
-        .contact-info {
-            background: #f0f0f0;
-            padding: 15px;
-            border-radius: 4px;
-            margin-top: 20px;
-        }
-
-        footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 12px;
-            color: #999;
-            text-align: center;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>Datenschutz | My life is all BOOKed</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #0f1828;
+      --muted: #5f6672;
+      --paper: #fffdf8;
+      --paper-alt: #f4eee2;
+      --gold: #b5903f;
+      --line: rgba(181, 144, 63, 0.42);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper-alt);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    header {
+      background: var(--ink);
+      color: var(--paper);
+      border-bottom: 2px solid var(--gold);
+      padding: 28px 20px;
+    }
+    header div, main, footer { width: min(860px, calc(100% - 40px)); margin: 0 auto; }
+    header a { color: #e3c879; text-decoration: none; }
+    header p { margin: 8px 0 0; color: rgba(255, 253, 248, 0.72); }
+    main {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      margin-top: 28px;
+      margin-bottom: 28px;
+      padding: clamp(24px, 5vw, 52px);
+    }
+    h1, h2, h3 { font-family: Georgia, serif; line-height: 1.25; }
+    h1 { margin: 0; font-size: clamp(30px, 6vw, 46px); }
+    h2 { margin: 2.2em 0 0.55em; font-size: 25px; }
+    h3 { margin: 1.4em 0 0.4em; font-size: 19px; }
+    p, li { color: #252c37; }
+    ul { padding-left: 22px; }
+    a { color: #755a1b; }
+    .summary {
+      background: #f8f2e4;
+      border-left: 4px solid var(--gold);
+      padding: 16px 18px;
+      margin: 26px 0;
+    }
+    .meta { color: var(--muted); font-size: 14px; }
+    .language-nav { display: flex; gap: 18px; margin-top: 18px; }
+    .language-nav a { color: #e3c879; }
+    hr { border: 0; border-top: 1px solid var(--line); margin: 52px 0; }
+    footer { color: var(--muted); font-size: 14px; padding: 0 0 32px; }
+    address { font-style: normal; }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="language-switcher">
-            <button class="active" onclick="switchLanguage('en')">English</button>
-            <button onclick="switchLanguage('de')">Deutsch</button>
-        </div>
-
-        <!-- ENGLISH VERSION -->
-        <div id="en" class="policy-section active">
-            <h1>Privacy Policy</h1>
-            <h2>My Life is all BOOKed</h2>
-
-            <div class="meta">
-                <p><strong>Effective Date:</strong> April 10, 2026</p>
-                <p><strong>Last Updated:</strong> April 10, 2026</p>
-            </div>
-
-            <div class="summary">
-                <strong>Summary:</strong> My Life is all BOOKed does not collect, transmit, or share any of your personal data. Everything stays on your device.
-            </div>
-
-            <h2>1. Introduction</h2>
-            <p>Welcome to <strong>My Life is all BOOKed</strong> ("the App"), a personal reading journal application for Android developed by the creator ("we," "our," or "us").</p>
-            <p>This Privacy Policy explains how we handle information in connection with your use of My Life is all BOOKed. We are committed to protecting your privacy. Please read this policy carefully.</p>
-
-            <h2>2. Information We Do NOT Collect</h2>
-            <p>My Life is all BOOKed is designed with privacy as a core principle. We do <strong>not</strong> collect:</p>
-            <ul>
-                <li>Personal identification information (name, email address, phone number)</li>
-                <li>Location data</li>
-                <li>Device identifiers or advertising IDs</li>
-                <li>Usage analytics or behavioral data</li>
-                <li>Reading habits, book lists, or review content</li>
-                <li>Payment information</li>
-                <li>Any other personal data</li>
-            </ul>
-
-            <h2>3. How Your Data Is Stored</h2>
-            <p>All data you enter into My Life is all BOOKed — including your book reviews, reading lists, favourites, reading statistics, and app settings — is stored <strong>exclusively and locally on your device</strong> using your device's local storage (browser localStorage via a WebView).</p>
-            <p>This means:</p>
-            <ul>
-                <li><strong>Your data never leaves your device</strong></li>
-                <li>We have <strong>no access</strong> to your data</li>
-                <li>Your data is <strong>not transmitted</strong> to any server, cloud service, or third party</li>
-                <li>Your data is <strong>not backed up</strong> to external servers (only to your device's own backup system, if enabled by you in your device settings)</li>
-            </ul>
-
-            <h2>4. Third-Party Services</h2>
-            <p>My Life is all BOOKed does <strong>not</strong> integrate any third-party services that collect data, including:</p>
-            <ul>
-                <li>No analytics services (Google Analytics, Firebase, Mixpanel, etc.)</li>
-                <li>No advertising networks</li>
-                <li>No crash reporting services</li>
-                <li>No social media SDKs</li>
-            </ul>
-            <p><strong>Capacitor Framework:</strong> The App is built using the Capacitor framework, which provides a WebView container for the web application. Capacitor itself does not collect user data.</p>
-
-<h2>4a. Advertising (Google AdMob)</h2>
-<p>My Life is all BOOKed displays advertisements provided by <strong>Google AdMob</strong>. AdMob may collect and use certain data to serve ads, including:</p>
-<ul>
-    <li>Android Advertising ID</li>
-    <li>Device information (model, OS version)</li>
-    <li>Approximate location (country/region level)</li>
-    <li>App interaction data</li>
-</ul>
-<p>This data is collected by Google, not by us. You can opt out of personalized advertising in your Android device settings under <strong>Privacy → Ads → Opt out of Ads Personalization</strong>.</p>
-<p>For more information, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
-<p>Users can permanently remove all ads via the in-app "Remove Ads" purchase.</p>
-
-<h2>4b. In-App Purchases</h2>
-<p>The App offers a one-time in-app purchase ("Remove Ads – €2.99") processed by <strong>Google Play Billing</strong>. We do not collect or store any payment information. All payment processing is handled by Google. See <a href="https://payments.google.com/payments/home#privacyNotice" target="_blank" rel="noopener">Google Payments Privacy Notice</a>.</p>
-
-            <h2>5. Permissions</h2>
-            <p>My Life is all BOOKed may request the following Android permissions:</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Permission</th>
-                        <th>Purpose</th>
-                        <th>Data Sent Externally</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><code>READ_EXTERNAL_STORAGE</code> / <code>READ_MEDIA_IMAGES</code></td>
-                        <td>To allow you to select book cover images from your gallery</td>
-                        <td>No — images are stored locally</td>
-                    </tr>
-                    <tr>
-                        <td><code>WRITE_EXTERNAL_STORAGE</code></td>
-                        <td>To save exported files (CSV export feature)</td>
-                        <td>No — files are saved to your device</td>
-                    </tr>
-                    <tr>
-                        <td><code>INTERNET</code></td>
-                        <td>Required by WebView; no network requests made by the App</td>
-                        <td>No active connections made</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p>We do not request permissions beyond what is necessary for the App's functionality.</p>
-
-            <h2>6. Goodreads CSV Import/Export</h2>
-            <p>The App includes a feature to import and export reading data in CSV format (compatible with Goodreads exports).</p>
-            <ul>
-                <li><strong>Import:</strong> CSV files are read from your device's local storage and processed locally. No data is transmitted to any server.</li>
-                <li><strong>Export:</strong> CSV files are generated from your local data and saved to your device. No data is transmitted externally.</li>
-            </ul>
-
-            <h2>7. Children's Privacy</h2>
-            <p>My Life is all BOOKed does not knowingly collect any information from children under the age of 13. Since the App collects no personal information whatsoever, it is safe for users of all ages.</p>
-
-            <h2>8. Data Security</h2>
-            <p>Since all data is stored locally on your device, the security of your data is protected by your device's own security mechanisms (screen lock, device encryption, etc.). We encourage you to use a strong screen lock on your device.</p>
-
-            <h2>9. Data Deletion</h2>
-            <p>To delete all data stored by My Life is all BOOKed:</p>
-            <ol>
-                <li><strong>Clear App Data:</strong> Go to your Android Settings → Apps → My Life is all BOOKed → Storage → Clear Data</li>
-                <li><strong>Uninstall the App:</strong> Uninstalling My Life is all BOOKed will remove all locally stored data.</li>
-            </ol>
-            <p>We have no ability to delete data on your behalf, as we do not have access to it.</p>
-
-            <h2>10. Changes to This Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last Updated" date at the top of this page. We encourage you to review this Privacy Policy periodically.</p>
-            <p>Continued use of the App after any changes to this Privacy Policy constitutes your acceptance of the updated policy.</p>
-
-            <h2>11. Contact Us</h2>
-            <p>If you have any questions or concerns about this Privacy Policy, please contact us at the email address provided in the app or on the app store listing.</p>
-
-            <footer>
-                <p>This privacy policy was last updated on April 10, 2026.</p>
-            </footer>
-        </div>
-
-        <!-- GERMAN VERSION -->
-        <div id="de" class="policy-section">
-            <h1>Datenschutzerklärung</h1>
-            <h2>My Life is all BOOKed</h2>
-
-            <div class="meta">
-                <p><strong>Gültig ab:</strong> 10. April 2026</p>
-                <p><strong>Zuletzt aktualisiert:</strong> 10. April 2026</p>
-            </div>
-
-            <div class="summary">
-                <strong>Zusammenfassung:</strong> My Life is all BOOKed sammelt, überträgt oder teilt keine deiner persönlichen Daten. Alles bleibt auf deinem Gerät.
-            </div>
-
-            <h2>1. Einleitung</h2>
-            <p>Willkommen bei <strong>My Life is all BOOKed</strong> ("die App"), einer persönlichen Lese-Journal-Anwendung für Android.</p>
-            <p>Diese Datenschutzerklärung erläutert, wie wir mit Informationen in Zusammenhang mit deiner Nutzung von My Life is all BOOKed umgehen. Wir sind dem Schutz deiner Privatsphäre verpflichtet. Bitte lies diese Richtlinie sorgfältig durch.</p>
-
-            <h2>2. Welche Daten wir NICHT erheben</h2>
-            <p>My Life is all BOOKed wurde mit Datenschutz als Kernprinzip entwickelt. Wir erheben <strong>keine</strong>:</p>
-            <ul>
-                <li>Persönliche Identifikationsdaten (Name, E-Mail-Adresse, Telefonnummer)</li>
-                <li>Standortdaten</li>
-                <li>Gerätekennungen oder Werbe-IDs</li>
-                <li>Nutzungsanalysen oder Verhaltensdaten</li>
-                <li>Lesegewohnheiten, Bücherlisten oder Rezensionsinhalte</li>
-                <li>Zahlungsinformationen</li>
-                <li>Andere persönliche Daten</li>
-            </ul>
-
-            <h2>3. Wie deine Daten gespeichert werden</h2>
-            <p>Alle Daten, die du in My Life is all BOOKed eingibst — einschließlich deiner Buchrezensionen, Leselisten, Favoriten, Lesestatistiken und App-Einstellungen — werden <strong>ausschließlich und lokal auf deinem Gerät</strong> gespeichert.</p>
-            <p>Das bedeutet:</p>
-            <ul>
-                <li><strong>Deine Daten verlassen dein Gerät nicht</strong></li>
-                <li>Wir haben <strong>keinen Zugriff</strong> auf deine Daten</li>
-                <li>Deine Daten werden <strong>nicht</strong> an Server, Cloud-Dienste oder Dritte übertragen</li>
-                <li>Deine Daten werden <strong>nicht</strong> auf externen Servern gesichert (nur auf den eigenen Sicherungssystemen deines Geräts, falls du diese aktiviert hast)</li>
-            </ul>
-
-            <h2>4. Drittanbieter-Dienste</h2>
-            <p>My Life is all BOOKed integriert <strong>keine</strong> Drittanbieter-Dienste, die Daten sammeln, einschließlich:</p>
-            <ul>
-                <li>Keine Analysedienste (Google Analytics, Firebase, Mixpanel, etc.)</li>
-                <li>Keine Werbenetzwerke</li>
-                <li>Keine Fehlerberichte-Dienste</li>
-                <li>Keine Social-Media-SDKs</li>
-            </ul>
-            <p><strong>Capacitor Framework:</strong> Die App wird mit dem Capacitor-Framework erstellt, das einen WebView-Container für die Webanwendung bereitstellt. Capacitor selbst sammelt keine Benutzerdaten.</p>
-
-<h2>3a. Werbung (Google AdMob)</h2>
-<p>My Life is all BOOKed zeigt Werbung von <strong>Google AdMob</strong>. AdMob kann bestimmte Daten erheben, darunter:</p>
-<ul>
-    <li>Android-Werbe-ID</li>
-    <li>Geräteinformationen (Modell, OS-Version)</li>
-    <li>Ungefährer Standort (Land/Region)</li>
-    <li>App-Interaktionsdaten</li>
-</ul>
-<p>Diese Daten werden von Google erhoben, nicht von uns. Du kannst personalisierte Werbung deaktivieren unter <strong>Android-Einstellungen → Datenschutz → Werbung → Personalisierte Werbung deaktivieren</strong>.</p>
-<p>Mehr Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutzrichtlinie</a>.</p>
-<p>Nutzer können alle Werbung dauerhaft über den In-App-Kauf "Werbung entfernen" abschalten.</p>
-
-<h2>3b. In-App-Käufe</h2>
-<p>Die App bietet einen einmaligen In-App-Kauf ("Werbung entfernen – €2,99"), abgewickelt über <strong>Google Play Billing</strong>. Wir erfassen oder speichern keine Zahlungsdaten. Alle Zahlungen werden von Google verarbeitet.</p>
-
-            <h2>5. Berechtigungen</h2>
-            <p>My Life is all BOOKed kann die folgenden Android-Berechtigungen anfordern:</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Berechtigung</th>
-                        <th>Zweck</th>
-                        <th>Datenübertragung extern</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><code>READ_EXTERNAL_STORAGE</code> / <code>READ_MEDIA_IMAGES</code></td>
-                        <td>Um dir zu ermöglichen, Buchcover-Bilder aus deiner Galerie auszuwählen</td>
-                        <td>Nein — Bilder werden lokal gespeichert</td>
-                    </tr>
-                    <tr>
-                        <td><code>WRITE_EXTERNAL_STORAGE</code></td>
-                        <td>Um exportierte Dateien zu speichern (CSV-Export-Funktion)</td>
-                        <td>Nein — Dateien werden auf deinem Gerät gespeichert</td>
-                    </tr>
-                    <tr>
-                        <td><code>INTERNET</code></td>
-                        <td>Von WebView erforderlich; die App stellt keine Netzwerkanfragen</td>
-                        <td>Keine aktiven Verbindungen</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p>Wir fordern keine Berechtigungen an, die über das hinausgehen, was für die Funktionalität der App erforderlich ist.</p>
-
-            <h2>6. Goodreads CSV Import/Export</h2>
-            <p>Die App enthält eine Funktion zum Importieren und Exportieren von Lesedaten im CSV-Format (kompatibel mit Goodreads-Exporten).</p>
-            <ul>
-                <li><strong>Import:</strong> CSV-Dateien werden aus dem lokalen Speicher deines Geräts gelesen und lokal verarbeitet. Keine Daten werden an einen Server übertragen.</li>
-                <li><strong>Export:</strong> CSV-Dateien werden aus deinen lokalen Daten generiert und auf deinem Gerät gespeichert. Keine Daten werden extern übertragen.</li>
-            </ul>
-
-            <h2>7. Datenschutz von Kindern</h2>
-            <p>My Life is all BOOKed erhebt wissentlich keine Informationen von Kindern unter 13 Jahren. Da die App keine persönlichen Informationen sammelt, ist sie für Benutzer jeden Alters sicher.</p>
-
-            <h2>8. Datensicherheit</h2>
-            <p>Da alle Daten lokal auf deinem Gerät gespeichert werden, wird die Sicherheit deiner Daten durch die eigenen Sicherheitsmechanismen deines Geräts geschützt (Bildschirmsperre, Geräteverschlüsselung, etc.). Wir empfehlen dir, eine starke Bildschirmsperre auf deinem Gerät zu verwenden.</p>
-
-            <h2>9. Datenlöschung</h2>
-            <p>Um alle von My Life is all BOOKed gespeicherten Daten zu löschen:</p>
-            <ol>
-                <li><strong>App-Daten löschen:</strong> Gehe zu deinen Android-Einstellungen → Apps → My Life is all BOOKed → Speicher → Daten löschen</li>
-                <li><strong>App deinstallieren:</strong> Das Deinstallieren von My Life is all BOOKed entfernt alle lokal gespeicherten Daten.</li>
-            </ol>
-            <p>Wir können Daten nicht in deinem Namen löschen, da wir keinen Zugriff darauf haben.</p>
-
-            <h2>10. Änderungen dieser Datenschutzerklärung</h2>
-            <p>Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Alle Änderungen werden in dem Datum "Zuletzt aktualisiert" oben auf dieser Seite widergespiegelt. Wir empfehlen dir, diese Datenschutzerklärung regelmäßig zu überprüfen.</p>
-            <p>Die weitere Nutzung der App nach Änderungen dieser Datenschutzerklärung bedeutet, dass du die aktualisierte Richtlinie akzeptierst.</p>
-
-            <h2>11. Kontakt</h2>
-            <p>Wenn du Fragen oder Bedenken zu dieser Datenschutzerklärung hast, kontaktiere uns bitte über die E-Mail-Adresse, die in der App oder im App-Store-Eintrag angegeben ist.</p>
-
-            <footer>
-                <p>Diese Datenschutzerklärung wurde zuletzt am 10. April 2026 aktualisiert.</p>
-            </footer>
-        </div>
+  <header>
+    <div>
+      <a href="/">My life is all BOOKed</a>
+      <h1>Datenschutzerklärung</h1>
+      <p>Für die App auf iOS und Android</p>
+      <nav class="language-nav" aria-label="Sprachauswahl">
+        <a href="#de">Deutsch</a>
+        <a href="#en">English</a>
+      </nav>
     </div>
+  </header>
 
-    <script>
-        function switchLanguage(lang) {
-            // Hide all sections
-            document.querySelectorAll('.policy-section').forEach(el => {
-                el.classList.remove('active');
-            });
+  <main>
+    <section id="de" lang="de">
+      <p class="meta">Stand: 14. Juli 2026</p>
+      <div class="summary">
+        Deine Buchdaten bleiben lokal auf deinem Gerät. Eine Anmeldung oder Registrierung ist nicht erforderlich. Nur die in dieser Erklärung beschriebenen Werbe- und Kaufdienste kommunizieren mit ihren Anbietern.
+      </div>
 
-            // Remove active class from all buttons
-            document.querySelectorAll('.language-switcher button').forEach(btn => {
-                btn.classList.remove('active');
-            });
+      <h2>1. Verantwortliche</h2>
+      <address>
+        Irina Losing<br>
+        Erminger Str. 26/1<br>
+        89134 Blaustein<br>
+        Deutschland<br>
+        E-Mail: <a href="mailto:irina.rico.bookie@gmail.com">irina.rico.bookie@gmail.com</a>
+      </address>
 
-            // Show selected section
-            document.getElementById(lang).classList.add('active');
+      <h2>2. Lokale App-Daten</h2>
+      <p>Die App speichert deine Einträge, Buchcover, Rezensionen, Leselisten, Favoriten, Statistiken und Einstellungen lokal auf deinem Gerät. Diese Inhalte werden von uns nicht an einen eigenen Server übertragen und sind für uns nicht einsehbar. Import, Export, PDF-Erstellung und das Teilen von Inhalten werden auf deinem Gerät ausgeführt; eine Übertragung erfolgt nur, wenn du sie über die Teilen-Funktion selbst auslöst.</p>
+      <p>Du kannst die lokalen Daten in der App beziehungsweise über die App-Einstellungen des Betriebssystems löschen. Beim Deinstallieren der App werden die lokal gespeicherten App-Daten entfernt, soweit sie nicht in einer von dir veranlassten Gerätesicherung enthalten sind.</p>
 
-            // Highlight active button
-            event.target.classList.add('active');
+      <h2>3. Google AdMob und Einwilligungsverwaltung</h2>
+      <p>Die kostenlose Version zeigt Werbung über Google AdMob (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Vor der Auslieferung von Werbung wird, soweit gesetzlich erforderlich, über die Google User Messaging Platform eine Einwilligung oder Auswahl abgefragt. Die Datenschutzoptionen können in den Einstellungen der App erneut geöffnet werden.</p>
+      <p>Das Google Mobile Ads SDK kann insbesondere folgende Daten verarbeiten:</p>
+      <ul>
+        <li>IP-Adresse zur Ableitung eines ungefähren Standorts,</li>
+        <li>Geräte- oder appbezogene Kennungen,</li>
+        <li>Werbedaten und Interaktionen mit Anzeigen oder der App,</li>
+        <li>Absturz-, Diagnose- und Leistungsdaten.</li>
+      </ul>
+      <p>Diese Verarbeitung dient der Auslieferung, Begrenzung, Messung und Sicherheit von Werbung sowie der Diagnose und Verbesserung des Werbedienstes. Auf iOS fordert die App derzeit ausschließlich nicht personalisierte Anzeigen an und verwendet keine App-Tracking-Transparency-Freigabe für die Werbekennung. Auf Android richtet sich die Personalisierung nach deiner Einwilligung und den Geräteeinstellungen.</p>
+      <p>Rechtsgrundlage ist, soweit erforderlich, deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO); für technisch notwendige Verarbeitung und Betrugsprävention unser berechtigtes Interesse an einem sicheren, werbefinanzierten Betrieb (Art. 6 Abs. 1 lit. f DSGVO). Google kann Daten auch außerhalb des EWR verarbeiten und verwendet hierfür nach eigenen Angaben geeignete Schutzmechanismen.</p>
+      <p>Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google-Datenschutzerklärung</a> und <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Datennutzung durch Google bei Partnerdiensten</a>.</p>
 
-            // Scroll to top
-            window.scrollTo(0, 0);
-        }
-    </script>
+      <h2>4. In-App-Kauf „Werbung entfernen“</h2>
+      <p>Der optionale, einmalige Kauf wird auf iOS durch Apple und auf Android durch Google Play abgewickelt. Wir erhalten keinen Zugriff auf deine vollständigen Zahlungsdaten. Die App fragt beim jeweiligen Store den Produktstatus und vorhandene Kaufberechtigungen ab, damit Werbung entfernt und ein Kauf wiederhergestellt werden kann.</p>
+      <p>Für die Zahlungsabwicklung gelten zusätzlich die Datenschutzbestimmungen von <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple</a> beziehungsweise <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google</a>.</p>
+
+      <h2>5. Empfänger und Speicherdauer</h2>
+      <p>Empfänger der unter Abschnitt 3 beschriebenen Daten können Google und beteiligte Werbepartner sein. Kaufdaten werden durch Apple beziehungsweise Google verarbeitet. Die Speicherdauer wird von den jeweiligen Anbietern nach ihren Richtlinien festgelegt. Wir selbst führen weder Benutzerkonten noch eine serverseitige Datenbank für deine Buch- oder Profildaten.</p>
+
+      <h2>6. Deine Rechte</h2>
+      <p>Du hast im Rahmen der gesetzlichen Voraussetzungen Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Eine erteilte Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen. Für lokal gespeicherte Inhalte kannst du die Löschfunktionen der App oder des Betriebssystems verwenden. Außerdem besteht ein Beschwerderecht bei einer Datenschutzaufsichtsbehörde.</p>
+
+      <h2>7. Kinder und Änderungen</h2>
+      <p>Die App richtet sich nicht gezielt an Kinder. Wir aktualisieren diese Erklärung, wenn sich Funktionen, eingebundene Dienste oder rechtliche Anforderungen ändern. Das jeweils aktuelle Datum steht am Anfang dieser Seite.</p>
+    </section>
+
+    <hr>
+
+    <section id="en" lang="en">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last updated: July 14, 2026</p>
+      <div class="summary">
+        Your book data stays locally on your device. No account or registration is required. Only the advertising and purchase services described below communicate with their providers.
+      </div>
+
+      <h2>1. Controller</h2>
+      <address>
+        Irina Losing<br>
+        Erminger Str. 26/1<br>
+        89134 Blaustein<br>
+        Germany<br>
+        Email: <a href="mailto:irina.rico.bookie@gmail.com">irina.rico.bookie@gmail.com</a>
+      </address>
+
+      <h2>2. Local app data</h2>
+      <p>The App stores your entries, book covers, reviews, reading lists, favourites, statistics and settings locally on your device. We do not transmit this content to our own server and cannot access it. Import, export, PDF creation and sharing are performed on your device; data is transferred only when you initiate sharing yourself.</p>
+      <p>You can delete local data in the App or through the operating system's app settings. Uninstalling the App removes locally stored app data unless it is retained in a device backup that you enabled.</p>
+
+      <h2>3. Google AdMob and consent management</h2>
+      <p>The free version displays ads through Google AdMob (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland). Where legally required, the Google User Messaging Platform asks for consent or privacy choices before ads are requested. You can reopen the advertising privacy options in the App's settings.</p>
+      <p>The Google Mobile Ads SDK may process:</p>
+      <ul>
+        <li>IP address to estimate general location,</li>
+        <li>device or app-related identifiers,</li>
+        <li>advertising data and interactions with ads or the App,</li>
+        <li>crash, diagnostic and performance data.</li>
+      </ul>
+      <p>This processing supports ad delivery, frequency capping, measurement, security, diagnosis and improvement of the advertising service. On iOS, the App currently requests non-personalized ads only and does not request App Tracking Transparency permission for the advertising identifier. On Android, personalization depends on your consent and device settings.</p>
+      <p>Where required, the legal basis is your consent (Article 6(1)(a) GDPR). Technically necessary processing and fraud prevention are based on our legitimate interest in securely operating an ad-supported App (Article 6(1)(f) GDPR). Google may process data outside the EEA and states that it uses appropriate safeguards.</p>
+      <p>More information: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from partner services</a>.</p>
+
+      <h2>4. “Remove Ads” in-app purchase</h2>
+      <p>The optional one-time purchase is processed by Apple on iOS and Google Play on Android. We do not receive your full payment details. The App queries the relevant store for product and entitlement status so that ads can be removed and purchases restored.</p>
+      <p>Payment processing is also governed by the privacy policies of <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple</a> or <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google</a>.</p>
+
+      <h2>5. Recipients and retention</h2>
+      <p>Google and participating advertising partners may receive the data described in section 3. Purchase data is processed by Apple or Google. Their respective policies determine retention periods. We do not operate user accounts or a server-side database for your book or profile data.</p>
+
+      <h2>6. Your rights</h2>
+      <p>Subject to legal requirements, you may have rights of access, rectification, erasure, restriction, portability and objection. You may withdraw consent at any time with future effect. Use the App or operating system controls to delete local content. You may also lodge a complaint with a data protection authority.</p>
+
+      <h2>7. Children and updates</h2>
+      <p>The App is not specifically directed at children. We will update this policy if features, integrated services or legal requirements change. The current revision date appears at the top of this page.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="/">Zurück zur Website</a> · © 2026 My life is all BOOKed
+  </footer>
 </body>
 </html>
